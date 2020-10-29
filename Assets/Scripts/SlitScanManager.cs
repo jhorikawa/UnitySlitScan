@@ -28,7 +28,8 @@ public class SlitScanManager : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = targetFrame;
-        webCamTexture = new WebCamTexture(refsize, refsize, targetFrame);
+        
+        webCamTexture = new WebCamTexture(WebCamTexture.devices[0].name, refsize, refsize, targetFrame);
         webCamTexture.Play();
     }
 
